@@ -4,7 +4,7 @@ const validateToken = require("../middleware/authMiddleware");
 const Post = require("../models/Post");
 
 router.get("/user", validateToken, (req, res) => {
-    // console.log("Fetched User Info:","user name:", req.user.name, "email:", req.user.email);
+    console.log("Fetched User Info:","user name:", req.user.name, "email:", req.user.email);
     res.status(200).json({
         message: "User info fetched successfully",
         user: req.user   // full user details
